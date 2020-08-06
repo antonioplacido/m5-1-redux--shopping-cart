@@ -1,12 +1,13 @@
-import React from 'react';
-import styled from 'styled-components';
-
-import Button from './Button';
+import React from "react";
+import styled from "styled-components";
+import { useDispatch } from "react-redux";
+import Button from "./Button";
+import { addItem } from "../actions";
 
 const StoreItem = ({ id, title, src, price }) => {
-  const formattedPrice = new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
+  const formattedPrice = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
   }).format(price / 100);
 
   return (
