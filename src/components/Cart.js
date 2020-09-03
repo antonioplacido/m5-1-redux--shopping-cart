@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import styled from "styled-components";
 import CartItem from "./CartItem";
@@ -14,7 +14,9 @@ const Cart = () => {
         <Subtitle>Cool things</Subtitle>
         <ItemList>Things</ItemList>
       </Top>
-      {storeItems.length > 0 && <CartItem />}
+      {storeItems.map((item) => (
+        <CartItem item={item} key={item.id} id={item.id} />
+      ))}
       <Bottom>
         <Total>This is where price shows up</Total>
         <Button>Fancy ass button</Button>
