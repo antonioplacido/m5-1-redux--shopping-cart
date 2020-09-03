@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-import Icon from "";
+import Icon from "react-icons-kit";
 
 const CartItem = () => {
   return (
     <Wrapper>
       <Head>The thing you bought</Head>
-      <Body></Body>
-      <Bottom></Bottom>
+      <Body>Quantity:</Body>
+      <Bottom />
     </Wrapper>
   );
 };
