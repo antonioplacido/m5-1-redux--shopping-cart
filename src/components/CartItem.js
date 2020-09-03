@@ -5,9 +5,14 @@ import Icon from "react-icons-kit";
 const CartItem = () => {
   return (
     <Wrapper>
-      <Head>The thing you bought</Head>
-      <Body>Quantity:</Body>
-      <Bottom />
+      <Head>
+        <h4>The thing you bought</h4>
+        <button>x</button>
+      </Head>
+      <Bottom>
+        <span>Quantity:</span>
+        <input value="#"></input>
+      </Bottom>
     </Wrapper>
   );
 };
@@ -16,11 +21,19 @@ export default CartItem;
 
 const Wrapper = styled.div`
   border: 0.5px white dashed;
-  margin-bottom: 5vh;
+  margin: 20px;
 `;
 
-const Head = styled.h4``;
+const Head = styled.h4`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
 
-const Body = styled.p``;
-
-const Bottom = styled.div``;
+const Bottom = styled.div`
+  background-color: teal;
+  input {
+    height: 25px;
+    width: 25px;
+  }
+`;
