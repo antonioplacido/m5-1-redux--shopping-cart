@@ -1,9 +1,12 @@
 import React, { useContext } from "react";
+import { useSelector } from "react-redux";
 import styled from "styled-components";
 import CartItem from "./CartItem";
 import Button from "./Button";
+import { getStoreItemArray } from "../../src/reducers";
 
 const Cart = () => {
+  const storeItems = useSelector(getStoreItemArray);
   return (
     <Wrapper>
       <Top>
@@ -11,7 +14,7 @@ const Cart = () => {
         <Subtitle>Cool things</Subtitle>
         <ItemList>Things</ItemList>
       </Top>
-      <CartItem />
+      {storeItems.length > 0 && <CartItem />}
       <Bottom>
         <Total>This is where price shows up</Total>
         <Button>Fancy ass button</Button>

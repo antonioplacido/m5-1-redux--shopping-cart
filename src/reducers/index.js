@@ -15,3 +15,5 @@ export default function cartReducer(state = initialState, action) {
       return state;
   }
 }
+// The below line sets the state as an array of items, allowing us to map through for the react component, when state is an object
+export const getStoreItemArray = (state) => Object.values(state);
